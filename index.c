@@ -1,12 +1,11 @@
-int led[]={2,3,4,5,6};
+int led[] = {2, 3, 4, 5, 6};
 
 void setup()
 {
-  for(int i=0;i<5;i++)
+  for(int i = 0; i < 5; i++)
   {
-    pinMode(led[i],OUTPUT); 
-  }
-  
+    pinMode(led[i], OUTPUT); 
+  }  
 }
 
 void loop()
@@ -23,20 +22,20 @@ void loop()
 
 void liga_desliga(int x)
 {
-  for(int i=0;i<5;i++)
+  for(int i = 0; i < 5 ; i++)
   {
-    digitalWrite(led[i],x);
+    digitalWrite(led[i], x);
     delay(300);
   }
 }
 
 void piscar_leds(int vs, int ql)
 {
-  for (int i=0;i<vs;i++)
+  for (int i = 0; i < vs; i++)
   {
-    digitalWrite(led[ql],1);
+    digitalWrite(led[ql], 1);
     delay(400);
-    digitalWrite(led[ql],0);
+    digitalWrite(led[ql], 0);
     delay(400);
   }
 }
